@@ -109,9 +109,9 @@ function listPasswords($passwordList) {?>
 <?php
 	foreach ($passwordList as $row) {?>
     <li>
-		<?=$row['application_username'];?> -
-		<a href='/regenerate-password/<?=$row['password_id'];?>'>Regenerate</a>
-		<a href='/delete-password/<?=$row['password_id'];?>'>Delete</a>
+		<?= htmlspecialchars($row['application_username']); ?> -
+		<a href='/regenerate-password/<?= $row['password_id']; ?>'>Regenerate</a>
+		<a href='/delete-password/<?= $row['password_id']; ?>'>Delete</a>
 	</li>
 <?php
 	}?>
@@ -121,8 +121,8 @@ function listPasswords($passwordList) {?>
 
 function showNewPassword($passName, $password) {?>
 	<div>
-		<strong>Username:</strong> <?=$passName;?><br />
-		<strong>Password:</strong> <?=$password;?>
+		<strong>Username:</strong> <?= htmlspecialchars($passName); ?><br />
+		<strong>Password:</strong> <?= $password; ?>
 	</div>
 <?php
 }
