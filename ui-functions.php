@@ -129,13 +129,13 @@ function showNewPassword($passName, $password) {?>
 
 function formPersonalSettings($user_details) {?>
 	<form action='/update-personal-settings' method='post'>
-		<input id='forward-email' name='forward-email' type='checkbox' class='form-check-input' <?=$user_details['forward_to_secondary'] ? 'checked' : '' ;?> />
+		<input id='forward-email' name='forward-email' type='checkbox' class='form-check-input' <?= $user_details['forward_to_secondary'] ? 'checked' : '' ; ?> />
 		<label for='forward-email' class='form-label'>Forward e-mails to secondary address</label>
 		<br />
 		<label for='secondary-address' class='form-label'>Secondary address</label>
-		<input id='secondary-address' name='secondary-address' value='<?=$user_details['secondary_mail'];?>' type='text' class='form-control' />
+		<input id='secondary-address' name='secondary-address' value='<?= htmlspecialchars($user_details['secondary_mail']); ?>' type='text' class='form-control' />
 		<br />
-		<input id='password-usage-report' name='password-usage-report' type='checkbox' class='form-check-input' <?=$user_details['password_usage_report'] ? 'checked' : '' ;?> />
+		<input id='password-usage-report' name='password-usage-report' type='checkbox' class='form-check-input' <?= $user_details['password_usage_report'] ? 'checked' : '' ; ?> />
 		<label for='password-usage-report' class='form-label'>Password usage reports</label>
 		<div class='text-center'>
 			<input class='btn btn-primary' type='submit' value='Update settings' />
