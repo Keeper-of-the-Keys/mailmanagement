@@ -1,7 +1,7 @@
 # Introduction
-This project was started when I realized that I would not be able to only use OAuth2 from my mail server since some of the clients that I use either don't support it or only support it for the big players.
+This project was started when I realized that I would not be able to only use OAuth2 from my mail own server on non-web clients, the reason for this being explained on the [thunderbird wiki](https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat#OAuth2).
 
-Thus instead of allowing "the" username and password to be stored in those clients this project allows the user to generat a per-app username/password pair that only works for the mail servers while his/her real username/password remain unused.
+Thus instead of allowing **"the"** username and password to be stored in those clients this project allows the user to generat a per-app username/password pair that only works for the mail servers while his/her real username/password remain unused.
 
 The project leverages SAML2 provided by apache mod_mellon or an OTP sent to the e-mail of the user to identify the user and allow access.
 
