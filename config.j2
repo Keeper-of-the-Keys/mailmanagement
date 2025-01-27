@@ -1,0 +1,9 @@
+<?php
+// Privileges needed by the webUI user -
+// GRANT SELECT, INSERT, UPDATE, DELETE ON `[dbName]`.* TO '[dbUser]'@'[dbHost]';
+$config['dbHost'] = '{{ mailmanagement_db_host }}';
+$config['dbName'] = '{{ mailmanagement_db_name }}';
+$config['dbUser'] = '{{ mailmanagement_db_user }}';
+$config['dbPass'] = '{{ mailmanagement_db_pass }}';
+$config['dsn'] = 'mysql:dbname='.$config['dbName'].';host='.$config['dbHost'];
+?>
