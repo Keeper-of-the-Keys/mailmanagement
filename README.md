@@ -7,7 +7,7 @@ The project leverages SAML2 provided by apache mod_mellon or an OTP sent to the 
 
 As of June 2024 the main functionality provided by this system is the ability to create these "app passwords" while some other settings can also be done.
 
-This ties in with a lua script that currently exists as a template in a role (as yet unpublished) in my [ansible collection servers](https://github.com/Keeper-of-the-Keys/ansible-collection-servers) as well as the mail server setup procedure there.
+This ties in with a lua script that currently exists as a template in a role in my [ansible collection servers](https://github.com/Keeper-of-the-Keys/ansible-collection-servers/blob/master/roles/mailserver/templates/dovecot-auth-lua.j2) as well as the mail server setup procedure there.
 
 # Future plans
 - Maybe leverage htmx for the UI
