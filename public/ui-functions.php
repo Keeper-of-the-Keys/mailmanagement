@@ -121,8 +121,8 @@ function listPasswords($passwordList) {?>
 
 function showNewPassword($passName, $password) {?>
 	<div>
-		<strong>Username:</strong> <?= htmlspecialchars($passName); ?><br />
-		<strong>Password:</strong> <?= $password; ?>
+		<strong>Username:</strong> <span style="font-family:'Lucida Console', monospace"><?= htmlspecialchars($passName); ?></span><br />
+		<strong>Password:</strong> <span style="font-family:'Lucida Console', monospace"><?= $password; ?></span>
 	</div>
 <?php
 }
